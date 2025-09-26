@@ -1,0 +1,16 @@
+.prose {
+  max-width: 65ch;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #0A1A3F;
+}
+.prose h2 {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}

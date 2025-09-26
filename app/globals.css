@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   BRAND TOKENS
+========================= */
+:root {
+  --navy: #0A1A3F;
+  --gold: #F5B700;
+  --ivory: #FAF9F6;
+  --charcoal: #111827;
+
+  --radius-xl: 1rem;
+  --shadow-sm: 0 6px 24px rgba(10,26,63,0.06);
+  --shadow-md: 0 10px 32px rgba(10,26,63,0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--navy);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.h1 {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-semibold;
+  font-family: var(--font-playfair);
+}
+
+.h2 {
+  @apply text-3xl sm:text-4xl font-semibold;
+  font-family: var(--font-playfair);
+}
+
+.subtle {
+  font-size: 15px; /* manual karena arbitrary value */
+  color: rgb(10 26 63 / 0.8); /* navy dengan opacity 80% */
+}
+
+/* =========================
+   COMPONENT UTILITIES
+========================= */
+.btn-primary {
+  @apply inline-flex items-center justify-center font-semibold text-sm px-5 py-3 rounded-xl border transition-colors;
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center font-semibold text-sm px-5 py-3 rounded-xl border transition-colors;
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(10, 26, 63, 0.2);
+  color: var(--navy);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.card {
+  @apply rounded-2xl border bg-white p-5 transition;
+  border-color: #e8e4da;
+  box-shadow: var(--shadow-sm);
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.section {
+  @apply py-20;
+}
+.section-muted {
+  @apply py-20;
+  background: var(--ivory);
+}
+
+.gold-mark {
+  width: 38px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+/* =========================
+   PROSE (teks panjang)
+========================= */
+.prose {
+  max-width: 65ch;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--navy);
+}
+.prose h2 {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+.prose p {
+  margin: 0.75rem 0;
+}
+/* Lock scroll saat mobile menu open */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+/* kunci scroll saat menu terbuka */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* dynamic viewport */
+}
+
+/* helper untuk safe area (iOS notch) */
+.safe-top  { padding-top: env(safe-area-inset-top); }
+.safe-bot  { padding-bottom: env(safe-area-inset-bottom); }
+/* app/globals.css */
+* {
+  scroll-behavior: smooth;
+}
+:root{
+  --font-apple:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",
+               "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",
+               "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",sans-serif;
+}
+html,body{
+  font-family:var(--font-apple);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+/* app/globals.css */
+
+
+
+  
+
