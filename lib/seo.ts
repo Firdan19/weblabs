@@ -1,8 +1,11 @@
-// lib/seo.ts
-import { DefaultSeoProps } from "next-seo";
+import type { Metadata } from "next";
 
-const config: DefaultSeoProps = {
-  title: "WEBLABS — Jasa Landing Page SEO-friendly",
+const SEO: Metadata = {
+  metadataBase: new URL("https://weblabs.id"),
+  title: {
+    default: "WEBLABS — Jasa Landing Page SEO-friendly",
+    template: "%s | Weblabs.id",
+  },
   description:
     "Spesialis landing page premium: cepat, mobile-first, dan SEO-friendly.",
   openGraph: {
@@ -20,12 +23,18 @@ const config: DefaultSeoProps = {
     ],
   },
   twitter: {
-    cardType: "summary_large_image",
+    card: "summary_large_image",
+    images: ["/og/weblabs-og.jpg"],
   },
-  additionalLinkTags: [
-    { rel: "canonical", href: "https://weblabs.id/" },
-    { rel: "icon", href: "/favicon.ico" },
-  ],
+  alternates: {
+    canonical: "https://weblabs.id/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
-export default config;
+export default SEO;
